@@ -30,20 +30,28 @@
     }
 
     .item2-box {
-        display: flex;
+        /* display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
         background: #f5f3f3;
         padding: 0 30px;
     }
-
+    .item2-box::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
     img.item2 {
         width: 48%;
+        float: left;
+        
         height: auto;
         margin-top: 30px;
         border-radius: 4px;
     }
-
+    img.item2:nth-child(2n){
+        margin-left: 4%;
+    }
     .tab {
         height: 50px;
         width: 100%;
@@ -64,7 +72,7 @@
         font-size: 14px;
         width: 70px;
         /* padding: 0 20px; */
-        margin-left: 30px;
+        margin-left: 60px;
         cursor: pointer;
         font-weight: 500;
     }
@@ -75,7 +83,7 @@
         width: 50px;
         position: absolute;
         bottom: 0px;
-        left: 40px;
+        left: 70px;
         border-radius: 4px;
     }
 
@@ -92,8 +100,8 @@
     <div class="tab">
         <div class="item  active" id="t1">作品集</div>
         <div class="item " id="t2">交互作品</div>
-        <div class="item " id="t3">其他设计</div>
-        <div class="item " id="t4">我的简历</div>
+        <!-- <div class="item " id="t3">其他设计</div>
+        <div class="item " id="t4">我的简历</div> -->
         <div class="line"></div>
     </div>
     <div class="item1-box box">
@@ -179,7 +187,7 @@
                 case 't1':
                     flag = "t1"
                     el.animate({
-                        left: '40px'
+                        left: '70px'
                     }, 200);
                     box1.fadeIn()
                     break;
@@ -188,7 +196,7 @@
                     var sum = 8;
 
                     el.animate({
-                        left: '140px'
+                        left: '200px'
                     }, 200);
                     box2.fadeIn()
 
