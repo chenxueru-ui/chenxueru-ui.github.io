@@ -21,7 +21,7 @@
     img.item1 {
         width: 90%;
         height: auto;
-        min-height: 300px;
+        min-height: 500px;
         display: block;
         margin: 0 auto;
         margin-bottom: 26px;
@@ -33,25 +33,30 @@
         /* display: flex;
         justify-content: space-between;
         flex-wrap: wrap; */
+        display: none;
         background: #f5f3f3;
         padding: 0 30px;
     }
-    .item2-box::after{
+
+    .item2-box::after {
         content: "";
         display: block;
         clear: both;
     }
+
     img.item2 {
         width: 48%;
         float: left;
-        
+
         height: auto;
         margin-top: 30px;
         border-radius: 4px;
     }
-    img.item2:nth-child(2n){
+
+    img.item2:nth-child(2n) {
         margin-left: 4%;
     }
+
     .tab {
         height: 50px;
         width: 100%;
@@ -99,8 +104,8 @@
 <body>
     <div class="tab">
         <div class="item  active" id="t1">作品集</div>
-   <div class="item " id="t2">我的简历</div> 
-<!--         <div class="item " id="t3">其他设计</div> 
+        <div class="item " id="t2">我的简历</div>
+        <!--         <div class="item " id="t3">其他设计</div> 
       <div class="item " id="t4">我的简历</div>  -->
         <div class="line"></div>
     </div>
@@ -154,9 +159,9 @@
         <img class="item1" data-echo="https://ui-1317811964.cos.ap-guangzhou.myqcloud.com/ui/47.jpg" alt="" srcset="">
     </div>
     <div class="item2-box box">
-<img class="item1" data-echo="https://ui-1317811964.cos.ap-guangzhou.myqcloud.com/ui/jianli.jpg" alt="" srcset="">
-        <img class="item1" data-echo="https://ui-1317811964.cos.ap-guangzhou.myqcloud.com/ui/jianli2.jpg" alt="" srcset="">
-        <img class="item1" data-echo="https://ui-1317811964.cos.ap-guangzhou.myqcloud.com/ui/jianli3.jpg" alt="" srcset="">
+        <img class="item1" src="https://ui-1317811964.cos.ap-guangzhou.myqcloud.com/ui/jianli.jpg" alt="" srcset="">
+        <img class="item1" src="https://ui-1317811964.cos.ap-guangzhou.myqcloud.com/ui/jianli2.jpg" alt="" srcset="">
+        <img class="item1" src="https://ui-1317811964.cos.ap-guangzhou.myqcloud.com/ui/jianli3.jpg" alt="" srcset="">
     </div>
     <div class="item3-box  box"></div>
     <div class="item4-box box"></div>
@@ -207,16 +212,16 @@
                     }, 200);
                     box2.fadeIn()
 
-                    if ($('.item2-box img').length !== 0) {
-                        return
-                    }
-                    var f = $('.item2-box')
-                    var imgel
-                    for (i = 1; i < 9; i++) {
-                        imgel = `<img class="item2" src="https://xueru-1254069354.cos.ap-shenzhen-fsi.myqcloud.com/%E4%BA%A4%E4%BA%92%E5%8A%A8%E5%9B%BE${i}.gif" alt="" srcset="">`
-                        f.append(imgel)
+                    // if ($('.item2-box img').length !== 0) {
+                    //     return
+                    // }
+                    // var f = $('.item2-box')
+                    // var imgel
+                    // for (i = 1; i < 9; i++) {
+                    //     imgel = `<img class="item2" src="https://xueru-1254069354.cos.ap-shenzhen-fsi.myqcloud.com/%E4%BA%A4%E4%BA%92%E5%8A%A8%E5%9B%BE${i}.gif" alt="" srcset="">`
+                    //     f.append(imgel)
 
-                    }
+                    // }
                     break;
                 case 't3':
                     flag = "t3"
