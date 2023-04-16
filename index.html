@@ -21,7 +21,7 @@
     img.item1 {
         width: 90%;
         height: auto;
-        min-height: 500px;
+        min-height: 300px;
         display: block;
         margin: 0 auto;
         margin-bottom: 26px;
@@ -187,6 +187,9 @@
             var box3 = $('.item3-box')
             var box4 = $('.item4-box')
             $('.box').fadeOut()
+            setTimeout(() => {
+                window.scrollTo(0, 0)
+            }, 300)
             switch (id) {
                 case 't1':
                     flag = "t1"
